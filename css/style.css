@@ -1,0 +1,183 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: "Raleway", sans-serif;
+}
+
+  /* nawigacja */
+
+.nav {
+  height: 50px;
+  background-color: #333;
+  text-align: center;
+  line-height: 50px;
+  /* jak ustawimy line-height o tym samy rozmiarze pikseli co heigh to tekst będzie po środku tego elementu -> trik ten działa tylko wtedy gdy mamy informację o wysokości danego elementu (w tym przypadku to jest 50px) i jeżeli jest tylko jedna linijka danego tekstu -> w innym przypadku cała struktura nam się rozwali */
+  font-size: 0;
+
+}
+.nav-item {
+  display: inline-block;
+  /* transition: background-color .7s; */
+}
+.nav-item a {
+  padding: 0 50px;
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 2px;
+  /* background-color: royalblue; */
+  /* jeżeli w HTML'u wszystkie li będę oddzielone enterami to gdy użyjemy background-color: (jakikolwiek kolor) to zobaczymy pokolorowane "klocki" ustawione obok siebie -> jest to błąd HTML i jak np. wszystkie li w HTML były by w jendej linii nie oddzielone enterami to te przerwy by znikneły. Aby pozbyć się tego błędu musimy w nav wpisać font-size: 0 a w nav li a -> font-size: (i ten rozmiar który chcemy uzyskać) Pozdro dla kumatych :) */
+  font-size: 16px;
+  transition: color .7s;
+}
+.nav-item a:hover {
+  color: royalblue;
+}
+
+  /* header */
+
+.header-img {
+  position: relative;
+  height: 300px;
+  background-image: url('../img/mountains-2120004_1920.jpg');
+  background-size: cover;
+  /* ^ patrz wyżej - właściwość background-size: cover -> rozciąga nam obraz ładnie i dopasowuje do naszej przestrzeni jaką daliśmy na obrazek */
+  background-position: 0 50%;
+  /* background-position -> możemy dać opcję: top bottom right left -> ta właściwość rozciąga nam tło w odpowiednim pozycji możemy też procentowo ustawić który moment obrazka chcemy pokazać */
+}
+.header-text {
+  color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: 5;
+}
+.header-bg {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(91, 89, 2, 0.4);
+}
+.header-text h1 {
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+  /* main */
+
+main {
+  margin: 50px auto;
+  width: 1200px;
+  /* text-align: center; */
+  /* ^ patrz wyżej -> aby wycentrować listę numerowaną bądź też nienumerowaną musimy w rodzicu ul użyć text-align: center a później na ul w mainie użyć display: inline-block */
+}
+/* main ul { */
+  /* display: inline-block; */
+  /* ^ patrz wyżej -> ten zapis odnosi się do zapisu w main -> text-align: center -> jeżeli te dwa zapisy będą zamieszczone (i ten a w main i ten w main ul to wtedy zostaną wyśrodkowane ikony numerowania */
+/* } */
+  /* wyśrodkowanie listy numerowanej - INNY SPOSÓB */
+
+  /* mogliśmy to zrobić w tej sposób czyli całe ul dać na margin: 0 auto i koniecznie przypisać width na jakąś wartość -> li jest elementem blokowym i zajmuje nam całą długość więc przy ustawione na sztywno szerokości możemy wyśrodkować wraz z punktorami całą listę - ja to już zrobiłęm wcześniej innym sposobem więc to zakomentuję */
+.services-list {
+margin: 0 auto;
+width: 200px;
+}
+.contact {
+  text-align: center;
+}
+main h2 {
+  margin-bottom: 30px;
+  text-transform: uppercase;
+  text-align: center;
+}
+.icon-box {
+  margin-left: 20px;
+}
+.icon-box a{
+  margin: 0 5px;
+  color: #ddd;
+  font-size: 30px;
+  transition: color .3s;
+}
+.icon-box a:hover {
+  color: royalblue;
+}
+.about-us-box {
+  margin: 40px 0;
+  position: relative;
+  height: 300px;
+  background-attachment: fixed;
+  background-position: center;
+  border-radius: 50px 0 50px 0;
+  overflow: hidden;
+}
+.top {
+  background-image: url('../img/kawa.jpg');
+    
+}
+.middle {
+  background-image: url('../img/mobile_phone.jpg');
+}
+.bottom {
+  background-image: url('../img/laptop with phone.jpg');
+}
+.about-us-text {
+  position: absolute;
+  bottom: 20px;
+  padding: 20px 40px;
+  text-align: center;
+  color: #fff;
+}
+.about-us-bg {
+  position: absolute;
+  bottom: 0px;
+  height: 45%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, .5);
+  /* border-radius: 50px 0 50px 0; */
+  /* ten sam efekt można zrobić poprzez dodanie do .about-us-box właściwości 
+    overflow: hidden
+  */
+}
+.about-us-text h3 {
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+table {
+  border-spacing: 0;
+  margin: 0 auto;
+}
+table, td, th {
+  border: 1px solid black;
+}
+td, th {
+  padding: 5px 20px;
+}
+thead {
+  background-color: peachpuff;
+}
+main i {
+  font-size: 25px;
+}
+
+
+  /* footer */
+
+footer {
+  /* width: 100vh; */
+  height: 80px;
+  line-height: 80px;
+  margin-top: 20px;
+  background-color: #333;
+  color: #ddd;
+  text-align: center;
+  font-size: 20px;
+}
+
