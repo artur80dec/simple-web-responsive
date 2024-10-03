@@ -1,1 +1,1 @@
-Projekt z kursów "Udemy" - wykonał -> "MMC School"
+Projekt zrobiony podczas przerabiania kursów prowadzonych przez "MMC School".
